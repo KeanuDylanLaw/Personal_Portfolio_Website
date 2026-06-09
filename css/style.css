@@ -114,3 +114,74 @@ footer{
     padding:25px;
     background:#111827;
 }
+
+/* =========================
+   Navigation
+========================= */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+    margin:0;
+    padding:0;
+}
+
+.nav-links a{
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    opacity:0.8;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* =========================
+   Mobile Navigation
+========================= */
+
+@media screen and (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        right:20px;
+        width:220px;
+        padding:20px;
+        border-radius:10px;
+        gap:15px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
